@@ -7,6 +7,7 @@
 }
 html, body{
     height: 100%;
+    /* perspective: 800px; */
     width: 100%;
 }
 #nav{
@@ -27,6 +28,9 @@ html, body{
 #nav h4{
     text-transform: uppercase;
     font-weight: 50px;  
+}
+#nav h4:hover{
+color: black;
 }
 #cursor{
     height: 20px;
@@ -96,8 +100,9 @@ margin-bottom: 10px;
     width:40%;
 }
 #page2{
-    height: 100vh;
+   min-height: 100vh;
     z-index: 10;
+    width: 100%;
 }
 #scrollar{
     white-space: nowrap;
@@ -135,38 +140,229 @@ margin-bottom: 10px;
         transform: translateX(-100%);
     }
 }
-.about{
-    text-align: center;
-    font-size: 50px;
-    margin-top: 10%;
-}
 #About-us{
     width: 100%;
     height: 40vh;
     display:flex;
     justify-content: center;
     align-items: center;
-    gap:40px;
-    /* background-color: aqua; */
+    gap:90px;
+    position: relative;
+    z-index: 10;
 }
-.logoo{
+ .logoo{  
     background-image: url(data:image/jpeg;base64,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);
     background-size: cover;
-    margin-left: 10%;
+    margin-left: 0%;
 }
 .dodge{
-    width: 12%;
-    height: 17vh;
+    width: 15%;
+    height: 23vh;
     backdrop-filter: blur(50px);
     border-radius: 10%;
     
 }
 .jojo{
-    margin-right: 10%;
+    margin-right: 0;
+}
+#about-us-in{
+    width: 43%;
+    height: 100%;
+}
+.about{
+    text-align: center;
+    font-size: 40px;
+    /* margin-top: 10%; */
+    position: relative;
+    z-index: 10;
 }
 #paragraph{
-    display: flex;
+    width: 100%;
     text-align: center;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
+}
+#card-cantener{
+   height: 60vh;
+   display: flex;
+   justify-content: center; 
+   align-items: center;
+   gap: 40px;
+   z-index:10 ;
+   position: relative;
+}
+.card{
+    height: 80%;
+    width: 25%;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+}
+.card1{
+    background-image: url(https://www.dodge.com/content/dam/fca-brands/na/dodge/en_us/2023/challenger/srt/desktop/MY23_SRThub_Challenger_SuperStock_Desktop_01.jpg);
+}
+.card2{
+    background-image: url(https://www.dodge.com/content/dam/fca-brands/na/dodge/en_us/2023/challenger/srt/desktop/MY23_SRThub_Challenger_Hellcat_Redeye_Widebody_Desktop_04.jpg.image.1440.jpg);
+}
+.card3{
+    background-image: url(https://www.dodge.com/content/dam/fca-brands/na/dodge/en_us/2023/charger/srt/desktop/MY23_SRThub_Charger_Hellcat_Redeye_Desktop_02.jpg.image.1440.jpg);
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: lightgrey;
+    padding-top: 140px;
+    padding: 30px;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+.overlay h4{
+    font-size: 25px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 800;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+.overlay p{
+    font-size: 20px;
+    color: black;
+}
+.card:hover .overlay{
+    opacity: 1;
+}
+.card:hover{
+    transform: rotate3d(-1,-1,0,20deg);
+}
+#red-div{
+    height: 65vh;
+    width: 100%;
+    background-image: url(https://www.dodge.com/content/dam/fca-brands/na/dodge/en_us/2023/challenger/srt/desktop/MY23_SRThub_Challenger_Hellcat_Redeye_Desktop_01.jpg);
+    background-size: cover;
+    object-fit: cover;
+}
+#red-div h4{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    padding-top: 220px;
+    transform: rotatez(7deg);
+}
+#page3{
+    height: 50vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.detail{
+    font-size: 25px;
+    font-weight: 700;
+    width: 70%;
+    text-align: center;
+    line-height: 35px;
+}
+#arro1{
+    width: 5%;
+    height: 3%;
+    transform: rotateZ(90deg);
+    position: absolute;
+    bottom: 18%;
+    right: 5%;
+}
+#arro2{
+    width: 5%;
+    height: 3%;
+    left: 5%;
+    top: 18%;
+    transform: rotateZ(270deg);
+    position: absolute;
+}
+#page4{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+}
+#page4 h1{
+   font-size: 90px;
+   font-weight: 900;
+    position: absolute;
+    top: -10%;
+    color: black;
+    -webkit-text-stroke: 2px white;
+}
+.elem{
+    height: 70%;
+    width: 20%;
+    overflow: hidden;
+    position: relative;
+}
+.elem h2{
+    height: 100%;
+    width: 100%;
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 10px;
+    color: black;
+    position: absolute;
+    z-index: 10;
+    transition: all ease 0.5s;
+}
+.elem img{
+    border-radius: 60px;
+    object-fit: cover;
+    scale: 1.1;
+}
+.elem:hover h2{
+    color: #fff;
+    background-color: transparent;
+}
+.elem:hover img{
+    scale: 1;
+    border-radius: 10px;
+}
+#footer-main{
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(to left bottom,gray,black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.footer{
+    width: 50%;
+    height: 100%;
+    background-color: aqua;
+    align-items: center;
+    justify-content: center;
+}
+.footer img{
+    justify-content: center;
+    align-items: center;
+    margin-left: 15%;
+}
+.socal{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    margin-top: 11%;
+    margin-left: 20%;
+    gap: 20px;
+    
+}
+.socalmid{
+    color: beige;
 }
