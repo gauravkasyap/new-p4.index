@@ -17,7 +17,7 @@ html, body{
     align-items: center;
     padding: 0 150px;
     justify-content: flex-start;
-    gap: 85px;
+    gap: 40px;
     position: fixed;
     z-index: 999;
 }
@@ -25,12 +25,147 @@ html, body{
     height: 80px;
     border-radius: 20px;
 }
-#nav h4{
+.NAV-details{
+    height: 80px;
+    width: 15%;
+    position: relative;
+    z-index: 10;
+}
+ul{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    z-index: 10;
+}
+#NAV1-li1{
+    width: 60vh;
+    height:0%;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.966);
+    justify-content: start;
+    right:45%;
+    top: 60%;
+    opacity: 0; 
+    z-index: 10;
+    transition: all 1s ease-out;
+    display: flex;
+}
+.NAV-details-ul1{
+    visibility: hidden; 
+    transition: all 1s ease-out;
+}
+.NAV-details-ul1:hover #NAV1-li1{
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+}
+.NAV-details h4{
     text-transform: uppercase;
     font-weight: 50px;  
+    visibility: visible;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    padding-top: 10%;
+    position: relative;
 }
 #nav h4:hover{
 color: black;
+}
+.NAV-details-ul2{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    visibility: hidden;
+    transition: all 1s ease-out;
+}
+.NAV1-li2{
+    width: 230vh;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.918);
+    text-align: center;
+    align-items:center ;
+    justify-content: center;
+    position: relative;
+    left: -350%;
+    font-size: 15px;
+    font-family:'montserrat';
+    font-weight: 700;
+    top: 60%;
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+.NAV-details-ul2:hover .NAV1-li2{
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+}
+.NAV-details-ul3{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #d81c1c;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    transition: all 1s ease-out;
+}
+.div-li3{
+    width: 230vh;
+    height: 0%;
+    display: flex;
+    position: relative;
+    left: -490%;
+    align-items: center;
+    justify-content: center;
+    top: 160%;
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+.NAV1-li3{
+    width: 100%;
+    height: 40vh;
+    background-color: rgba(0, 0, 0, 0.932);
+    border: solid 2px white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+    transition: all 1s ease-out;
+}
+.NAV-details-ul3:hover .div-li3{
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+}
+.NAV-details-ul4{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    transition: all 1s ease-out;
+}
+.NAV1-li4{
+    width: 100%;
+    height: 0;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    top: 60%;
+    background-color: rgba(0, 0, 0, 0.932);
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+.NAV-details-ul4:hover .NAV1-li4{
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
 }
 #cursor{
     height: 20px;
@@ -44,7 +179,7 @@ color: black;
 #cursor-blur{
     height: 200px;
     width: 200px;
-    background-color: rgba(0, 255, 255, 0.452);
+    background-color: rgba(0, 255, 234, 0.411);
     filter: blur(40px);
     position: fixed;
     border-radius: 50%;
@@ -127,10 +262,10 @@ margin-bottom: 10px;
     transition: all linear 0.4;
     margin-right: 10px;
     color: transparent;
-    -webkit-text-stroke: 1px rgb(0, 255, 200);
+    -webkit-text-stroke: 1px rgba(153, 155, 9, 0.623);
 }
 #scrollar h4:hover{
-    color: rgb(0, 255, 200);
+    color: rgba(155, 155, 9, 0.637);
 }
 @keyframes scroll{
     from{
@@ -294,10 +429,10 @@ margin-bottom: 10px;
 #page4 h1{
    font-size: 90px;
    font-weight: 900;
-    position: absolute;
-    top: -10%;
-    color: black;
-    -webkit-text-stroke: 2px white;
+   position: absolute;
+   top: -10%;
+   color: black;
+   -webkit-text-stroke: 2px white;
 }
 .elem{
     height: 70%;
@@ -345,7 +480,6 @@ margin-bottom: 10px;
 .footer{
     width: 50%;
     height: 100%;
-    background-color: aqua;
     align-items: center;
     justify-content: center;
 }
